@@ -1,0 +1,123 @@
+// for responsive design
+@import 'respondMixin';
+
+// responsive device width
+$xs : 576px;
+$sm : 768px;
+$md : 992px;
+$lg : 1200px;
+
+
+// colors
+$white :#FFFFFF;
+$black :#2F1C20;   //for button also
+$light_gray:#F3F3F3; //for header background
+$dark_gray:#E2DDDD; 
+$light_text_color:#DDB4B8; //for circle color in header 
+$dark_text_color:#763B2B;
+$light_heading_color:#F4D3BE;
+$dark_heading_color:#571E2B;
+$dark_heading_color1:#35121a;
+
+
+// font sizes
+$heading_size:2.5rem;
+$subheading_size:1.5rem; //also for buttons
+$para_size:1rem;
+
+
+// for small devices
+$sm_heading_size:1.5rem;
+$sm_subheading_size:.9rem; //also for buttons
+$sm_para_size:.7rem;
+
+
+*{
+    transition: all .3s ease-in;
+}
+
+.btn{
+    background: $dark_heading_color;
+    color: $light_gray;
+    text-transform:uppercase;
+    transition: all .3s ease-in;
+    border-radius: 2rem;
+    padding-left: 5%;
+    padding-right: 5%;
+ 
+    &:hover{
+        color:white;
+        background: $dark_heading_color1;
+        border-color: $dark_heading_color1;
+
+    }
+}
+
+h4{
+    font-size: $para_size;
+    opacity: .8;
+    display: inline-block;
+    margin-right: 5%;
+}
+ul{
+    list-style: none;
+    display: inline-block;
+    li{
+        display: inline-block;
+    }
+}
+p{
+    display: inline-block;
+    padding: 5%
+}
+
+.product-img-container{
+    .product-img{
+        max-height:450px
+    }
+}
+
+.product-detail::before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background: $light_text_color;
+}
+.slick-next:before{
+    color: $dark_heading_color
+}
+.product-detail{
+    .container.row{
+            margin: auto;
+
+            .h1{
+                font-size:$heading_size;
+                text-transform: capitalize;
+
+            }
+            
+            
+            // .product-detail-container{
+            //     .product-detail{
+            //         .product-rating{
+            //             .rating{
+                            
+            //             }
+            //         }
+            //     }
+            // }
+    }
+
+
+}
+.cart{
+    background: none;
+    border: .1rem $dark_heading_color solid;
+    color: $dark_heading_color
+}
+.buy{
+    border: .1rem $dark_heading_color solid;
+}

@@ -1,0 +1,58 @@
+<div class="modal fade" id="modelId{{product.id}}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Item Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                            <div class="product-img">
+                                    <img src="{{product.product_img.url}}" alt="">
+                            </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                            <div class="porduct-detail">
+                                    <h1 class="h1">{{product.product_name}}</h1>
+                                    <div class="product-rating">
+                                        <h4>Rating  </h4> 
+                                        <ul class="rating">
+                                          <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                          <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                          <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                          <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                          <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                        
+                                        </ul>
+                                        <p class="buyer">(50)</p>
+                                    </div>
+                                    <div class="product-price">
+                                        <h4>Price </h4> 
+                                        <p class="price">  {{product.product_price}}$</p>
+                        
+                                    </div>
+                                    
+                                    <div class="product-count">
+                                      <h4>Count</h4>
+                                      <i class="fa fa-minus" aria-hidden="true"></i><p>2</p><i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                 
+                            </div>
+                    </div>
+
+                </div>
+                    
+                
+            <div class="modal-footer">
+                    <a href="#" class="btn btn-md cart disable">ADD TO CART</a>
+                    <a  href='#' class="btn btn-md buy">BUY NOW</a>
+              
+                
+            </div>
+        </div>
+    </div>
+</div>

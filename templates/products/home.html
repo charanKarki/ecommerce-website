@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block 'webContent' %}
+
+<!-- include header  -->
+{% include 'products/header.html' %}
+
+{%  include 'products/menShopList.html'%}
+
+{% include 'products/addBanner.html' %}
+
+{% include 'products/womenShopList.html' %}
+
+<button type="button" class="btn btn-light rounded-circle" style="position: fixed;right:2%;bottom:2%" id='gotop'><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+{% endblock 'webContent' %}
+

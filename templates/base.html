@@ -1,0 +1,128 @@
+    {% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Ecommerse website</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'products/css/style.css' %}">
+    
+    {% block 'style' %}
+    {% endblock 'style' %}
+    
+  </head>
+  <body>
+
+
+
+      <!-- header section -->
+<nav class="navbar navbar-expand-md navbar-light">
+            
+    <a class="navbar-brand" href="{% url 'home' %}"><i class="fa fa-shopping-bag mr-3" aria-hidden="true"></i>Shoping Website</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto mr-5  mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Shopping</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-sm text-light" href="{% url 'logout' %}">Log Out <i class="fa fa-sign-out " aria-hidden="true"></i></a>
+            </li>
+
+            {% else %}
+            <li class="nav-item">
+                    <a class="nav-link btn btn-sm text-light mx-2" href="{% url 'login' %}">Log In <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link btn btn-sm text-light" href="{% url 'signup' %}">Create Account <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+            </li>
+            {% endif %}
+        </ul>
+        
+    </div>
+</nav>
+
+{% block 'webContent' %}
+{%  endblock 'webContent' %}
+
+
+      <!-- footer section -->
+<footer>
+    <div class="container row">
+        <div class=" col-sm-12 col-md-3 text-center logo">
+            <!-- logo section -->
+            <i class="fa fa-shopping-bag fa-5x" aria-hidden="true"></i>
+            <h1 class="h4 mt-3">Ecommerse  Website  2019</h1>
+        </div>
+        <div class="col-sm-12 col-sm-6 col-md-3 menu">
+            <!-- menu  section -->
+            <h1 class="h4">Menu</h1>
+            <ul>
+                <li><a href="#menSection" class="text-dark">Explore</a> </li>
+                <li>About Us</li>
+                <li>Blog</li>
+                <li>Contect</li>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-sm-6 col-md-3 shopping">
+            <!-- shoping for section -->
+            <h1 class="h4">Shopping For</h1>
+            <ul>
+                <li><a href="#menSection" class="text-dark">Men</a> </li>
+                <li><a href="#womenSection" class="text-dark">Women</a></li>
+              
+             
+            </ul>
+        </div>
+        <div class=" col-sm-12 col-md-3 newsletter">
+            <!-- news letter -->
+            <h1 class="h4">Newsletter</h1>
+            <form action="" method="post">
+                    <label for="useremail">Email Us :</label>
+                <div class="input-group">
+                   
+                    <i class="fa fa-envelope input-group-prepand input-group-text" aria-hidden="true"></i>
+                    <input type="email" name="email" id="useremail" class="form-control" placeholder="exm@empl.com">
+                </div>
+                
+            </form>
+        </div>
+
+    </div>
+    <p class="text-center">ecommerce Website &copy2019</p>
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="{% static 'products/js/script.js' %}"></script>
+    
+    {% block 'script' %}
+    {% endblock 'script' %}
+
+  </body>
+</html>

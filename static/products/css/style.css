@@ -1,0 +1,408 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.btn {
+  background: #571E2B;
+  color: #F3F3F3;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.btn:hover {
+  color: white;
+  background: #35121a;
+}
+
+.card {
+  border: none;
+}
+
+.navbar {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+header {
+  background: #F3F3F3;
+  height: 40rem;
+  width: 100vw;
+  overflow: hidden;
+}
+
+header .container-fluid {
+  position: relative;
+}
+
+header .container-fluid .textSection {
+  z-index: 1;
+  position: relative;
+}
+
+header .container-fluid .textSection .jumbotron {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  background: transparent;
+}
+
+header .container-fluid .textSection .jumbotron .h1 {
+  font-size: 2.5rem;
+}
+
+header .container-fluid .textSection .jumbotron .lead {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #763B2B;
+}
+
+header .container-fluid .textSection .jumbotron .btn {
+  margin-top: 15%;
+}
+
+header .container-fluid .shoppingImg {
+  position: relative;
+}
+
+header .container-fluid .shoppingImg .rect {
+  position: relative;
+  left: 20%;
+}
+
+header .container-fluid .shoppingImg .rect #Rectangle_20 {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header .container-fluid .shoppingImg #men {
+  width: auto;
+  height: 40%;
+  position: absolute;
+  top: 10%;
+  left: 2%;
+}
+
+header .container-fluid .shoppingImg #women {
+  width: auto;
+  position: absolute;
+  right: -100px;
+  top: 7rem;
+}
+
+.shoppingSection {
+  margin: 5% auto;
+}
+
+.shoppingSection .imgArea {
+  position: relative;
+  padding: 5% 2%;
+}
+
+.shoppingSection .imgArea img {
+  width: 100%;
+}
+
+.shoppingSection .imgArea .btn {
+  position: absolute;
+  top: 0%;
+  display: block;
+  width: 60%;
+}
+
+.shoppingSection .itemList {
+  height: 80%;
+  margin: auto 0;
+  background: #ffffffb6;
+}
+
+.shoppingSection .itemList .card {
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  padding: 0;
+  margin: 1%;
+  background-color: #F3F3F3;
+}
+
+.shoppingSection .itemList .card .card-title {
+  color: #571E2B;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.shoppingSection .itemList .card .card-text {
+  font-size: 1rem;
+  color: #763B2B;
+}
+
+.shoppingSection .itemList .card:hover {
+  background-color: #E2DDDD;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 2;
+}
+
+#womenSectionImg1 {
+  display: none;
+}
+
+.saleBanner {
+  padding: 5%;
+  background-image: url("../img/banner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.saleBanner .jumbotron {
+  background: transparent;
+  width: 50%;
+}
+
+.saleBanner .jumbotron .h4 {
+  letter-spacing: .2rem;
+}
+
+.saleBanner .jumbotron .lead {
+  font-weight: 500;
+  margin-top: 2%;
+  font-size: 1rem;
+  color: #571E2B;
+}
+
+.saleBanner .jumbotron .shop-btn {
+  display: block;
+  padding-top: 10%;
+  letter-spacing: .2rem;
+  color: #571E2B;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+footer {
+  background: #F3F3F3;
+  padding-top: 5%;
+}
+
+footer .container {
+  margin: auto;
+}
+
+footer .container .col-sm-12 {
+  text-align: left;
+}
+
+footer .container .col-sm-12 .h4 {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #571E2B;
+}
+
+footer .container .col-sm-12 ul {
+  list-style: none;
+  padding: 0;
+  opacity: .5;
+}
+
+footer .container .col-sm-12 ul li:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+footer .container .logo .h4 {
+  text-decoration: none;
+}
+
+footer p {
+  opacity: .5;
+}
+
+@media (max-width: 767px) {
+  header .container-fluid .textSection .jumbotron {
+    top: 46px;
+    left: 25%;
+    z-index: 10;
+  }
+  header .container-fluid .textSection .jumbotron .h1 {
+    font-size: 1.5rem;
+  }
+  header .container-fluid .textSection .jumbotron .lead {
+    font-size: 1rem;
+  }
+  header .container-fluid .textSection .jumbotron .btn {
+    margin: 2rem;
+  }
+  header .container-fluid .shoppingImg #men {
+    height: 40%;
+    top: 15%;
+    left: -2rem;
+  }
+  header .container-fluid .shoppingImg #women {
+    right: -100px;
+    top: 13rem;
+    height: 40%;
+  }
+  header .container-fluid .shoppingImg .rect {
+    left: -65%;
+  }
+  .shoppingSection .imgArea {
+    position: relative;
+    height: 400px;
+  }
+  .shoppingSection .imgArea .btn {
+    top: 80%;
+    letter-spacing: 3px;
+  }
+  #womenSectionImg1 {
+    display: block;
+  }
+  #womenSectionImg {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar {
+    background: white;
+    position: fixed;
+  }
+  .btn {
+    font-size: 0.9rem;
+  }
+  header .container-fluid .textSection .jumbotron {
+    top: 46px;
+    left: 5%;
+    z-index: 10;
+  }
+  header .container-fluid .textSection .jumbotron .h1 {
+    font-size: 1.5rem;
+  }
+  header .container-fluid .textSection .jumbotron .lead {
+    font-size: 1rem;
+  }
+  header .container-fluid .textSection .jumbotron .btn {
+    margin: 0;
+  }
+  header .container-fluid .shoppingImg #men {
+    height: 30%;
+    top: 20%;
+    left: -20%;
+  }
+  header .container-fluid .shoppingImg #women {
+    height: 30%;
+    top: 20rem;
+    right: -30px;
+  }
+  header .container-fluid .shoppingImg .rect {
+    left: -1rem;
+  }
+  .shoppingSection .imgArea {
+    position: relative;
+    height: 400px;
+  }
+  .shoppingSection .imgArea .btn {
+    top: 80%;
+    letter-spacing: 3px;
+  }
+  #womenSectionImg1 {
+    display: block;
+  }
+  #womenSectionImg {
+    display: none;
+  }
+  .saleBanner {
+    background-size: cover;
+    background-position-x: 90%;
+  }
+  .saleBanner .jumbotron {
+    width: 80%;
+  }
+  .saleBanner .jumbotron .h4 {
+    letter-spacing: .1rem;
+  }
+  .saleBanner .jumbotron .shop-btn {
+    font-size: 1.5rem;
+  }
+}
+
+.modal .modal-dialog {
+  max-width: 700px !important;
+}
+
+.modal .btn {
+  background: #571E2B;
+  color: #F3F3F3;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  border-radius: 2rem;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.modal .btn:hover {
+  color: white;
+  background: #35121a;
+  border-color: #35121a;
+}
+
+.modal h4 {
+  font-size: 1rem;
+  opacity: .8;
+  display: inline-block;
+  margin-right: 5%;
+}
+
+.modal ul {
+  list-style: none;
+  display: inline-block;
+}
+
+.modal ul li {
+  display: inline-block;
+}
+
+.modal p {
+  display: inline-block;
+  padding: 5%;
+}
+
+.modal .product-detail::before {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background: #DDB4B8;
+}
+
+.modal .h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.modal .cart {
+  background: none;
+  border: 0.1rem #571E2B solid;
+  color: #571E2B;
+}
+
+.modal .buy {
+  border: 0.1rem #571E2B solid;
+}

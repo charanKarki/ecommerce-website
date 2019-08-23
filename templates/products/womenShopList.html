@@ -1,0 +1,28 @@
+{% load static %}
+<section class="container row shoppingSection" id="womenSection">
+        <div id="womenSectionImg1" class="col-xs-12 col-md-3 imgArea">
+            <a class="btn  btn-md" href="#" role="button">#women's item</a>
+                <img src="{% static 'products/img/womenSection.png'%}" alt="">
+               
+    </div> 
+        <div  class="col-xs-12 col-md-8  itemList">
+            <div class="row">
+                {% for product in women_products %}
+                <div class="card col-sm-4 col-md-4 col-lg-3 "data-toggle='modal' data-target='#modelId{{product.id}}'>
+                        <img class="card-img-top" src="{{product.product_img.url}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{product.product_name}}</h4>
+                            <p class="card-text">{{product.product_price}} $</p>
+                        </div>
+                    </div>
+                    <!-- product detail model -->
+                    {% include 'products/item_detail.html' %}
+                 {% endfor %}
+
+            </div>
+        </div>
+        <div id="womenSectionImg" class="col-xs-12 col-md-3 imgArea">
+                <a class="btn  btn-md" href="#" role="button">#women's item</a>
+            <img src='{% static "products/img/womenSection.png"%}' alt="">
+        </div>
+</section>

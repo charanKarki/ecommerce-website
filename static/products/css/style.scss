@@ -1,0 +1,481 @@
+// for responsive design
+@import 'respondMixin';
+
+// responsive device width
+$xs : 576px;
+$sm : 768px;
+$md : 992px;
+$lg : 1200px;
+
+
+// colors
+$white :#FFFFFF;
+$black :#2F1C20;   //for button also
+$light_gray:#F3F3F3; //for header background
+$dark_gray:#E2DDDD; 
+$light_text_color:#DDB4B8; //for circle color in header 
+$dark_text_color:#763B2B;
+$light_heading_color:#F4D3BE;
+$dark_heading_color:#571E2B;
+$dark_heading_color1:#35121a;
+
+
+// font sizes
+$heading_size:2.5rem;
+$subheading_size:1.5rem; //also for buttons
+$para_size:1rem;
+
+
+// for small devices
+$sm_heading_size:1.5rem;
+$sm_subheading_size:.9rem; //also for buttons
+$sm_para_size:.7rem;
+
+html{
+    scroll-behavior: smooth
+}
+body{
+    overflow-x: hidden
+}
+*{
+    transition: all .3s ease-in;
+}
+
+.btn{
+    background: $dark_heading_color;
+    color: $light_gray;
+    text-transform:uppercase;
+    transition: all .3s ease-in;
+
+    &:hover{
+        color:white;
+        background: $dark_heading_color1;
+    }
+}
+.card{
+    border: none;
+}
+.navbar{
+    background: transparent;
+    position: absolute;
+    width:100%;
+    z-index: 1000;
+    top:0;
+    left:0;
+}
+
+
+
+header{
+    background: $light_gray;
+    height: 40rem;
+    width:100vw;
+    overflow: hidden;
+    .container-fluid{
+        position: relative;
+        .textSection{
+            z-index: 1;
+            position: relative;
+            .jumbotron{
+                
+                position: absolute;
+                top:15%;
+                left:15%;
+                background: transparent;
+                .h1{
+                    font-size: $heading_size;
+                    
+                }
+                .lead{
+                    font-weight: 500;
+                    font-size: $para_size;
+                    color: $dark_text_color;
+                    
+                }
+                .btn{
+                    
+                    margin-top: 15%
+                }
+    
+            }
+        }
+        
+        .shoppingImg{
+            position: relative;
+            .rect{
+                position: relative;
+                left: 20%;
+                #Rectangle_20{
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                } 
+            }
+            
+            #men{
+                
+                width: auto;
+                height: 40%;
+                position: absolute;
+                top: 10%;
+                left:2%
+                
+            }
+            #women{
+                width: auto;
+            
+                position: absolute;
+                right:-100px;
+                top: 7rem;
+            }
+        }
+    }
+}
+
+
+// item perchased section
+.shoppingSection{
+    
+    margin: 5% auto;
+    .imgArea{
+        position: relative;
+        padding:5% 2%;
+        img{
+            width: 100%;
+        }
+        .btn{
+            position: absolute;
+            top:0%;
+            display: block;
+            width:60%;
+        }
+
+    }
+    .itemList{
+        height:80%;
+        margin:auto 0;
+        background: #ffffffb6;
+        .card{
+            transition: all .2s ease-in;
+            padding:0;
+            margin: 1%;
+            background-color: $light_gray;
+            .card-title{
+                color: $dark_heading_color;
+                font-size: $subheading_size;
+                font-weight: 400
+            }
+            .card-text{
+                font-size: $para_size;
+                color: $dark_text_color;
+            }
+            &:hover{
+                background-color: $dark_gray;
+                transform: scale(1.05);
+                z-index:2;
+            }
+            
+        }
+    }
+}
+
+
+// men item section
+
+
+//women item section
+#womenSectionImg1{
+    display: none
+}
+
+
+// banner section
+.saleBanner{
+    padding: 5%;
+    background-image: url('../img/banner.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    .jumbotron{
+        background: transparent;
+        width: 50%;
+        .h4{
+            letter-spacing: .2rem;
+        }
+        .lead{
+            font-weight: 500;
+            margin-top: 2%;
+            font-size: $para_size;
+            color: $dark_heading_color;
+        }
+        .shop-btn{
+            display: block;
+            padding-top:10%; 
+            letter-spacing: .2rem;
+            color: $dark_heading_color;
+            font-size: $subheading_size;
+            text-decoration: underline;
+        }
+
+    }
+}
+
+
+
+
+// footer section
+footer{
+    background: $light_gray;
+    padding-top: 5%;
+    .container{
+        margin: auto;
+        
+        .col-sm-12{
+            text-align: left;
+            .h4{
+                font-size: $para_size;
+                text-decoration: underline;
+                color: $dark_heading_color
+            }
+            ul{
+                list-style: none;
+                padding: 0;
+                opacity: .5;
+                li{
+                    &:hover{
+                        opacity:1;
+                        text-decoration: underline; 
+                    }
+                }
+                
+            }
+        }
+        .logo{
+            .h4{
+                text-decoration: none;
+            }
+        }
+    }
+    p{
+        opacity: .5;
+    }
+}
+
+// for medium devices
+@include respond-below($sm){
+    header{
+        .container-fluid{
+            .textSection{
+                .jumbotron{
+                    top:46px;
+                    left:25%;
+                    z-index:10;
+                    .h1{
+                        font-size: $sm_heading_size;
+        
+                    }
+                    .lead{
+                        font-size: $para_size
+                    }
+                    .btn{
+                        margin: 2rem;
+                    }
+                }
+            }
+            .shoppingImg {
+                #men{
+                    height:40%;
+                    top: 15%;
+                    left: -2rem;
+                }
+                #women{
+                    right: -100px;
+                    top: 13rem;
+                    height: 40%;
+                }
+                .rect{
+                    left:-65%
+                }
+            }
+           
+
+        }
+    }
+
+
+    .shoppingSection{
+        
+        .imgArea {
+            position: relative;
+            height: 400px;
+            .btn{
+                top:80%;
+                letter-spacing: 3px;
+            }
+        } 
+    }
+    #womenSectionImg1{
+        display: block
+    }
+    #womenSectionImg{
+        display: none;
+    }
+
+}
+
+
+
+
+// for small devices
+@include respond-below($xs){
+    .navbar{
+        background: white;
+        position: fixed;
+    }
+    .btn{
+        font-size: $sm_subheading_size;
+    }
+    header{
+        .container-fluid{
+            .textSection{
+                .jumbotron{
+                    top:46px;
+                    left:5%;
+                    z-index:10;
+                    .h1{
+                        font-size: $sm_heading_size;
+        
+                    }
+                    .lead{
+                        font-size: $para_size
+                    }
+                    .btn{
+                        margin: 0;
+                    }
+                }
+            }
+            .shoppingImg {
+                #men{
+                    height:30%;
+                    top:20%;
+                    left:-20%
+                }
+                #women{
+                    height: 30%;
+                    top:20rem;
+                    right:-30px;
+                }
+                .rect{
+                    left:-1rem
+                }
+            }
+           
+
+        }
+        
+      
+    }
+    .shoppingSection{
+        
+        .imgArea {
+            position: relative;
+            height: 400px;
+            .btn{
+                top:80%;
+                letter-spacing: 3px;
+            }
+        } 
+    }
+    #womenSectionImg1{
+        display: block
+    }
+    #womenSectionImg{
+        display: none;
+    }
+
+    .saleBanner {
+        background-size: cover;
+        background-position-x: 90%;
+        .jumbotron{
+            width:80%;
+            .h4{
+                letter-spacing: .1rem;
+
+            }
+            .shop-btn{
+                font-size:$sm_heading_size
+            }
+        }
+    }
+}
+
+.modal{
+    .modal-dialog{
+        max-width: 700px !important;
+    }
+.btn{
+    background: $dark_heading_color;
+    color: $light_gray;
+    text-transform:uppercase;
+    transition: all .3s ease-in;
+    border-radius: 2rem;
+    padding-left: 5%;
+    padding-right: 5%;
+ 
+    &:hover{
+        color:white;
+        background: $dark_heading_color1;
+        border-color: $dark_heading_color1;
+
+    }
+}
+
+h4{
+    font-size: $para_size;
+    opacity: .8;
+    display: inline-block;
+    margin-right: 5%;
+}
+ul{
+    list-style: none;
+    display: inline-block;
+    li{
+        display: inline-block;
+    }
+}
+p{
+    display: inline-block;
+    padding: 5%
+}
+
+
+    
+
+
+.product-detail::before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background: $light_text_color;
+}
+
+
+.h1{
+    font-size:$heading_size;
+    text-transform: capitalize;
+
+}
+ 
+.cart{
+    background: none;
+    border: .1rem $dark_heading_color solid;
+    color: $dark_heading_color
+}
+.buy{
+    border: .1rem $dark_heading_color solid;
+}
+}

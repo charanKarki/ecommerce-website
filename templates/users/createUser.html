@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block 'webContent' %}
+
+{% block 'style' %}
+<style>
+    body{
+           background: #ddb4b8
+       }
+.container{
+    border-radius: .2rem;
+    margin: auto;
+    padding: 2%;
+    margin-top: 6rem;
+}
+.create-account{
+    background: #dee2e6;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+</style>
+
+{% endblock 'style' %}
+
+<div class="container row mt-5">
+        <div class="col-xs-12 col-sm-8 col-md-6 mx-auto create-account">
+            <form action="" method="post">
+            {% csrf_token %}
+            <h4 class="h2 font-weight-normal">Create your Account</h4>
+            {{form|crispy}}
+            
+            <input type="submit" value="Create Account" class="form-control btn text-light">
+
+            </form>
+            
+        </div>
+    </div>
+
+{% endblock 'webContent' %}
