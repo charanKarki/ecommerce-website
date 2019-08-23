@@ -25,7 +25,7 @@ SECRET_KEY = 'w$n5*c#qa9ojt2)e(1n__nj7*5ji^6pf(rpuziqqp1s2@k70#^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://charan-ecommerce-website.herokuapp.com']
+ALLOWED_HOSTS = ['charan-ecommerce-website.herokuapp.com']
 
 
 # Application definition
